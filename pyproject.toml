@@ -1,0 +1,35 @@
+[project]
+name = "simple-fastapi"
+version = "0.1.0"
+description = "A simple FastAPI application"
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "httpx>=0.25.0",
+    "aiohttp>=3.9.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "google-auth>=2.0.0",
+    "requests>=2.31.0",
+    "numpy>=1.24.0",
+    "chromadb>=0.4.0",
+    "supabase>=2.0.0",
+    "azure-core>=1.29.0",
+    "playwright>=1.40.0",
+    "azure-ai-inference>=1.0.0b6",
+    "matplotlib>=3.7.5",
+    "anthropic>=0.72.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.uv]
+dev-dependencies = []
