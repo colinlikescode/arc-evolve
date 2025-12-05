@@ -11,53 +11,53 @@
 
 <br>
 
-# 🇨🇳 EEVEE - ARC-AGI-1 (中文)
+# 🇺🇸 EEVEE - ARC-AGI-1 (English)
 
-用于解决 ARC-AGI-1 问题的进化大规模突变。
+Evolutionary Mass Mutation for solving ARC-AGI-1 problems.
 
-### 岛屿配置
+### Island Configuration
 
-| 岛屿 | 第 1-4 轮    | 第 5-12 轮   |
-| ---- | ------------ | ------------ |
-| 1    | Gemini 3 Pro | Gemini 3 Pro |
-| 2    | Gemini 3 Pro | Gemini 3 Pro |
-| 3    | Gemini 3 Pro | Gemini 3 Pro |
-| 4    | Claude 4.5   | Gemini 3 Pro |
-| 5    | Claude 4.5   | Gemini 3 Pro |
+| Island | Rounds 1-4   | Rounds 5-12  |
+| ------ | ------------ | ------------ |
+| 1      | Gemini 3 Pro | Gemini 3 Pro |
+| 2      | Gemini 3 Pro | Gemini 3 Pro |
+| 3      | Gemini 3 Pro | Gemini 3 Pro |
+| 4      | Claude 4.5   | Gemini 3 Pro |
+| 5      | Claude 4.5   | Gemini 3 Pro |
 
-### 第 0 轮：视觉先验分类器
+### Round 0: Visual Prior Classifier
 
-Claude 基于官方训练数据集、ConceptARC 和 ARC-GEN-100K 构建了视觉先验
+Claude built the priors via the Official Training Dataset, ConceptARC, & ARC-GEN-100K
 
-| 步骤 | 模型       | 用途         |
-| ---- | ---------- | ------------ |
-| 0    | Claude 4.5 | 分类视觉先验 |
+| Step | Model      | Purpose                |
+| ---- | ---------- | ---------------------- |
+| 0    | Claude 4.5 | Classify visual priors |
 
-### 大规模突变
+### Mass Mutation
 
-| 轮次 | 模型                    | 并行调用 |
-| ---- | ----------------------- | -------- |
-| 1    | Grok 4.1 Fast Reasoning | 100      |
-| 2    | Gemini 3 Pro            | 1        |
-| 3    | Grok 4.1 Fast Reasoning | 100      |
-| 4    | Claude 4.5 Opus         | 1        |
-| 5    | Grok 4.1 Fast Reasoning | 100      |
+| Round | Model                   | Parallel Calls |
+| ----- | ----------------------- | -------------- |
+| 1     | Grok 4.1 Fast Reasoning | 100            |
+| 2     | Gemini 3 Pro            | 1              |
+| 3     | Grok 4.1 Fast Reasoning | 100            |
+| 4     | Claude 4.5 Opus         | 1              |
+| 5     | Grok 4.1 Fast Reasoning | 100            |
 
-### 依赖项
+### Dependencies
 
-1. **Railway.com 服务器** - 托管测试问题
-2. **API 密钥**：
+1. **Railway.com server** - hosts the test questions
+2. **API Keys**:
    - Gemini 3 Pro
    - Claude 4.5 Opus
    - Grok 4.1 Fast Reasoning
 
-### 复现步骤
+### To Reproduce
 
-1. 在 EVAL 中运行 runner.sh 启动流程。可以通过 logs.txt 查看进度
+1. Run `runner.sh` in the `EVAL` folder to start the process. Monitor progress via `logs.txt`.
 
-2. 请将问题放在单独的服务器上，该服务器只能通过 API 访问以 1) 获取问题 2) 提交答案。这有助于保持完整性并防止数据污染
+2. Host the questions on a separate server accessible only via API endpoints to: 1) fetch questions and 2) submit answers. This maintains integrity and prevents data contamination.
 
-3. 本项目使用 GCP、Azure 和 Grok 直接 API 访问构建。
+3. Built using GCP, Azure, and Grok Direct API Access.
 
 <br>
 
@@ -119,53 +119,53 @@ Claude가 공식 훈련 데이터셋, ConceptARC 및 ARC-GEN-100K를 통해 사�
 
 <br>
 
-# 🇺🇸 EEVEE - ARC-AGI-1 (English)
+# 🇨🇳 EEVEE - ARC-AGI-1 (中文)
 
-Evolutionary Mass Mutation for solving ARC-AGI-1 problems.
+用于解决 ARC-AGI-1 问题的进化大规模突变。
 
-### Island Configuration
+### 岛屿配置
 
-| Island | Rounds 1-4   | Rounds 5-12  |
-| ------ | ------------ | ------------ |
-| 1      | Gemini 3 Pro | Gemini 3 Pro |
-| 2      | Gemini 3 Pro | Gemini 3 Pro |
-| 3      | Gemini 3 Pro | Gemini 3 Pro |
-| 4      | Claude 4.5   | Gemini 3 Pro |
-| 5      | Claude 4.5   | Gemini 3 Pro |
+| 岛屿 | 第 1-4 轮    | 第 5-12 轮   |
+| ---- | ------------ | ------------ |
+| 1    | Gemini 3 Pro | Gemini 3 Pro |
+| 2    | Gemini 3 Pro | Gemini 3 Pro |
+| 3    | Gemini 3 Pro | Gemini 3 Pro |
+| 4    | Claude 4.5   | Gemini 3 Pro |
+| 5    | Claude 4.5   | Gemini 3 Pro |
 
-### Round 0: Visual Prior Classifier
+### 第 0 轮：视觉先验分类器
 
-Claude built the priors via the Official Training Dataset, ConceptARC, & ARC-GEN-100K
+Claude 基于官方训练数据集、ConceptARC 和 ARC-GEN-100K 构建了视觉先验
 
-| Step | Model      | Purpose                |
-| ---- | ---------- | ---------------------- |
-| 0    | Claude 4.5 | Classify visual priors |
+| 步骤 | 模型       | 用途         |
+| ---- | ---------- | ------------ |
+| 0    | Claude 4.5 | 分类视觉先验 |
 
-### Mass Mutation
+### 大规模突变
 
-| Round | Model                   | Parallel Calls |
-| ----- | ----------------------- | -------------- |
-| 1     | Grok 4.1 Fast Reasoning | 100            |
-| 2     | Gemini 3 Pro            | 1              |
-| 3     | Grok 4.1 Fast Reasoning | 100            |
-| 4     | Claude 4.5 Opus         | 1              |
-| 5     | Grok 4.1 Fast Reasoning | 100            |
+| 轮次 | 模型                    | 并行调用 |
+| ---- | ----------------------- | -------- |
+| 1    | Grok 4.1 Fast Reasoning | 100      |
+| 2    | Gemini 3 Pro            | 1        |
+| 3    | Grok 4.1 Fast Reasoning | 100      |
+| 4    | Claude 4.5 Opus         | 1        |
+| 5    | Grok 4.1 Fast Reasoning | 100      |
 
-### Dependencies
+### 依赖项
 
-1. **Railway.com server** - hosts the test questions
-2. **API Keys**:
+1. **Railway.com 服务器** - 托管测试问题
+2. **API 密钥**：
    - Gemini 3 Pro
    - Claude 4.5 Opus
    - Grok 4.1 Fast Reasoning
 
-### To Reproduce
+### 复现步骤
 
-1. Run `runner.sh` in the `EVAL` folder to start the process. Monitor progress via `logs.txt`.
+1. 在 EVAL 中运行 runner.sh 启动流程。可以通过 logs.txt 查看进度
 
-2. Host the questions on a separate server accessible only via API endpoints to: 1) fetch questions and 2) submit answers. This maintains integrity and prevents data contamination.
+2. 请将问题放在单独的服务器上，该服务器只能通过 API 访问以 1) 获取问题 2) 提交答案。这有助于保持完整性并防止数据污染
 
-3. Built using GCP, Azure, and Grok Direct API Access.
+3. 本项目使用 GCP、Azure 和 Grok 直接 API 访问构建。
 
 <br>
 
